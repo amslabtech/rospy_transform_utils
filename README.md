@@ -5,7 +5,7 @@
 This module contains utility functions for calculating coordinates and poses, which are useful when writing ROS scripts in Python.
 
 |Functions|
-----
+|:-|
 |calc_homogeneous_matrix|
 |calc_relative_pose|
 |calc_global_pose_from_relative_pose|
