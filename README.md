@@ -35,5 +35,5 @@ pip3 install git+https://github.com/amslabtech/rospy_transform_utils.git
 You can import this module for example:
 
 ```python
-import transform_utils
+import transformutils
 ```

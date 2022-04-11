@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
-    name="transform_utils",
+    name="transformutils",
     version="1.1",
     license="MIT",
     description="Useful conversion tools for rospy",
