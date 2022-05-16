@@ -7,8 +7,8 @@ This module contains utility functions for calculating coordinates and poses, wh
 |Functions|
 |:-|
 |calc_homogeneous_matrix|
+|calc_transformed_pose|
 |calc_relative_pose|
-|calc_global_pose_from_relative_pose|
 |get_msg_from_translation_and_quaternion|
 |get_msg_from_array_2d|
 |get_array_2d_from_msg|

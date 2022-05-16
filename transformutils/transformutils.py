@@ -20,10 +20,10 @@ def calc_homogeneous_matrix(pose: Pose) -> np.ndarray:
     return homogeneous_matrix
 
 
-def calc_relative_pose(pose_from: Pose, pose_to: Pose) -> Pose:
+def calc_transformed_pose(pose_from: Pose, pose_diff: Pose) -> Pose:
 
     converted_matrix = (
-        tf_conversions.transformations.inverse_matrix(calc_homogeneous_matrix(pose_from)) @ calc_homogeneous_matrix(pose_to))
+        calc_homogeneous_matrix(pose_from) @ calc_homogeneous_matrix(pose_diff))
     quaternion = tf_conversions.transformations.quaternion_from_matrix(
         converted_matrix)
     translation = tf_conversions.transformations.translation_from_matrix(
@@ -32,10 +32,10 @@ def calc_relative_pose(pose_from: Pose, pose_to: Pose) -> Pose:
     return get_msg_from_translation_and_quaternion(translation, quaternion)
 
 
-def calc_global_pose_from_relative_pose(pose_base: Pose, pose_relative: Pose) -> Pose:
+def calc_relative_pose(pose_from: Pose, pose_to: Pose) -> Pose:
 
     converted_matrix = (
-        calc_homogeneous_matrix(pose_base) @ calc_homogeneous_matrix(pose_relative))
+        tf_conversions.transformations.inverse_matrix(calc_homogeneous_matrix(pose_from)) @ calc_homogeneous_matrix(pose_to))
     quaternion = tf_conversions.transformations.quaternion_from_matrix(
         converted_matrix)
     translation = tf_conversions.transformations.translation_from_matrix(
