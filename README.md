@@ -27,7 +27,7 @@ You can install this module with the following command if you are using pip3.
 The requirements will be automatically installed by pip3.
 
 ```sh
-pip3 install https://github.com/amslabtech/rospy_transform_utils/archive/main.zip
+pip3 install https://github.com/amslabtech/rospy_transform_utils/archive/master.zip
 ```
 
 ## Usage
