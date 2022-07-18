@@ -1,4 +1,4 @@
-from setuptools import setup, find_packages
+from setuptools import find_packages, setup
 
 setup(
     name="transformutils",
@@ -7,6 +7,6 @@ setup(
     description="Useful conversion tools for rospy",
     author="Yasunori Hirakawa",
     url="https://github.com/amslabtech/rospy_transform_utils.git",
-    package=find_packages(),
+    packages=["transformutils"],
     install_requires=["numpy", "rospy", "tf_conversions"]
 )
