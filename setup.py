@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name="transformutils",
-    version="1.1",
+    version="1.2",
     license="MIT",
     description="Useful conversion tools for rospy",
     author="Yasunori Hirakawa",
